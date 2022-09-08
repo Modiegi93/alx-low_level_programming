@@ -2,8 +2,8 @@
 #include <stdlib.h>
 
 /**
- * main entry point
- * Return always 1 (Success)
+ * main- prints out the last part of the qoute in standar error
+ * Return: always 1 (Success)
  */
 int main(void)
 {
