@@ -8,7 +8,7 @@
 void jack_bauer(void)
 
 {
-	int min, hr;
+	int hr, min;
 
 	for (hr = 0; hr <= 23; hr++)
 	{
