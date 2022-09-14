@@ -14,7 +14,7 @@ int main(void)
 		if (a == 0)
 			printf("%ld\n", b);
 		else if (a == 1)
-			printf("%ld\n", c);
+			printf(",%ld\n", c);
 		else
 		{
 			c += b;
