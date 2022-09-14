@@ -11,7 +11,7 @@ int main(void)
 	unsigned long x_a, x_b, y_a, y_b;
 	unsigned long a, b;
 
-	for (count = 0; count <= 92; count++)
+	for (count = 0; count < 92; count++)
 	{
 		sum = x + y;
 		printf("%lu, ", sum);
