@@ -3,13 +3,19 @@
 /**
  * print_rev - Write a function that prints a string, in reverse,
  *followed by a new line.
- * @s: char
- * Return: a string in reverse
+ * @s: string to print
+ * Return: void
  */
 void print_rev(char *s)
 {
-	char *str;
+	char *t = s;
 
-	str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-	print_rev(str);
+	if (s)
+	{
+		while (*t)
+			++t;
+		while (s < t--)
+			_putchar(*t);
+		_putchar('\n');
+	}
 }

@@ -3,14 +3,24 @@
 
 /**
  * rev_string - Write a function that reverses a string.
- * @s: char
- * Return: reverse a string
+ * @s: a string
+ * Return: void
  */
 void rev_string(char *s)
 {
-	char str[10] = "My School";
+	char *t = s;
 
-	printf("%s\n", str);
-	rev_string(str);
-	printf("%s\n", str);
+	if (s)
+	{
+		while (*t)
+			++t;
+
+		while (s < --t)
+		{
+			*s ^= *t;
+			*t ^= *s;
+			*s ^= *t;
+			++s;
+		}
+	}
 }
