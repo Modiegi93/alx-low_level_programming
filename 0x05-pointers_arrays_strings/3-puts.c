@@ -3,11 +3,15 @@
 /**
  * _puts - Write a function that prints a string,
  * followed by a new line, to stdout
- * @str: char
- * Return: a string
+ * @str: string to print
+ * Return: void
  */
 void _puts(char *str)
 {
-	str = "I do not fear computers. I fear the lack of them - Isaac Asimov";
-	_puts(str);
+	if (str)
+	{
+		while (*str)
+			_putchar(*str++);
+		_putchar('\n');
+	}
 }
