@@ -17,4 +17,5 @@ char *rot13(char *s)
 		if (('a' <= *c && *c <= 'z') || ('A' <= *c && *c <= 'Z'))
 			*c = (*c - shift + 13) % 26 + shift;
 	}
+	return (s);
 }
