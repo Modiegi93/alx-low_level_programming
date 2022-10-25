@@ -9,22 +9,16 @@
 size_t print_listint_safe(const listint_t *head)
 {
 	size_t nodeCount = 0;
+	const listint_t *x_node = head;
 
-	while (head)
+	if (!head)
+		exit(98);
+
+	while (x_node)
 	{
-		printf("[%p] %d\n", (void *)head, head->n);
-		nodeCount += 1;
-
-		if (head > head->next)
-		{
-			head = head->next;
-		}
-		else
-		{
-			head = head->next;
-			printf("-> [%p] %d\n", (void *)head, head->n);
-			exit(98);
-		}
+		printf("[%p] %d\n", (void *)x_node, x_node->n);
+		x_node = x_node->next;
+		nodeCount++;
 	}
 	return (nodeCount);
 }
