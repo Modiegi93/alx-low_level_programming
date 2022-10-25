@@ -8,17 +8,23 @@
  */
 size_t print_listint_safe(const listint_t *head)
 {
-	size_t xnode;
-	const listint_t *link_node = head;
+	size_t nodeCount = 0;
 
-	if (!head)
-		exit(98);
-
-	while (link_node)
+	while (head)
 	{
-		printf("[%p] %i\n", (void *)link_node, link_node->n);
-		link_node = link_node->next;
-		xnode++;
+		printf("[%p] %d\n", (void *)head, head->n);
+		nodeCount += 1;
+
+		if (head > head->next)
+		{
+			head = head->next;
+		}
+		else
+		{
+			head = head->next;
+			printf("[%p] %d\n", (void *)head, head->n);
+			break;
+		}
 	}
-	return (xnode);
+	return (nodeCount);
 }
