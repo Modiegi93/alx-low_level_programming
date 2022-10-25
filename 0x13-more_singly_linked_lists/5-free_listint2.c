@@ -4,21 +4,28 @@
 
 /**
  * free_listint2 - function that frees a listint_t list
+ * set head to NULL
  * @head: header pointer
  *
  * Return: Nothing
  */
 void free_listint2(listint_t **head)
 {
-	listint_t *temp;
-	listint_t *temp2;
+	listint_t *pre_node;
+	listint_t *next_node;
 
-	temp2 = *head;
-	while (temp2 != NULL && head != NULL)
+	if (!head)
+		return;
+
+	pre_node = *head;
+	next_node = (*head)->next;
+
+	while (next_node)
 	{
-		temp = temp2;
-		temp2 = temp2->next;
-		free(temp);
+		free(pre_node);
+		pre_node = next_node;
+		next_node = next_node->next;
 	}
+	free(pre_node);
 	*head = NULL;
 }
