@@ -4,7 +4,7 @@
 /**
  * main - check code
  *
- * Return: Always EXIT_SUCCESS
+ * Return: Always EXIT_SUCCESS.
  */
 int main(void)
 {
